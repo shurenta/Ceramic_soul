@@ -52,11 +52,12 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: $light;
+.container {
+    width: 360px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.container {
-    width: 100%;
-    padding: 0 10px;
+body {
+    background-color: $light;
 }

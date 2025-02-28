@@ -1,11 +1,14 @@
+// базовые стили
 @use "/src/sass/libs/modern-normalize.min.css";
 @use "/src/sass/libs/fontello.css";
 @use "/src/sass/base/variables.scss" as *;
 @use "/src/sass/base/basic.scss";
 
+// Стили комппонентов
 @use "/src/sass/blocks/header.scss";
-
-@use "/src/sass/ui/titels.scss";
+@use "/src/sass/base/mixins.scss";
+@use "/src/sass/ui/titles.scss";
 @use "/src/sass/ui/buttons.scss";
 
+// Стили блоков
 @use "/src/sass/blocks/promo.scss";

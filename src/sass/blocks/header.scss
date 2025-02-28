@@ -29,15 +29,15 @@
 
 .burger {
     display: flex;
+    height: 23px;
     flex-direction: column;
     row-gap: 10px;
     padding-right: 35px;
-    height: 23px;
 
     span {
-        display: block;
         width: 20px;
         height: 1px;
         background-color: $dark;
     }
+
 }
