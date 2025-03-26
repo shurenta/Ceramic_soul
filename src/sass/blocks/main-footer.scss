@@ -1,0 +1,205 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.main-footer {
+    background-color: $dark;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: $light;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &__header {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-top: 40px;
+    }
+
+    &__fieldset {
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+
+    &__form {
+        margin-top: 40px;
+    }
+
+    &__email {
+        color: $light;
+        width: 293px;
+        border: none;
+        border-bottom: 1px solid $light;
+        background-color: $dark;
+        padding-bottom: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &::placeholder {
+            font-size: 14px;
+            color: $ui-active;
+        }
+
+        &:invalid {
+            border-color: $ui-error;
+            color: $ui-error;
+
+            &::placeholder {
+                color: $ui-error;
+            }
+        }
+    }
+
+    &__label-checkbox {
+        display: flex;
+        margin-top: 26px;
+        align-items: center;
+
+        a {
+            color: #a22dc6;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+        appearance: none;
+        margin-right: 15px;
+        width: 15px;
+        height: 15px;
+        border-radius: 2px;
+        border: 1px solid $light;
+        cursor: pointer;
+        background-color: transparent;
+        transition: all 0.2s;
+
+        &:required {
+            border-color: $ui-error;
+        }
+
+        &:checked {
+            background-color: $ceramic;
+            border-color: $dark;
+            border: none;
+
+            &::after {
+                content: "✓";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                color: $light;
+                font-size: 14px;
+            }
+
+        }
+    }
+
+    &__btn {
+        margin-top: 20px;
+    }
+
+    &__nav {
+        margin-top: 40px;
+        display: flex;
+        column-gap: 66px;
+        row-gap: 44px;
+        flex-wrap: wrap;
+
+        ul {
+            padding: 0;
+            list-style: none;
+            margin-top: 40px;
+
+            li {
+                margin-top: 20px;
+            }
+
+            a {
+                color: $light;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__social {
+        margin-top: 40px;
+
+        ul {
+            margin-top: 40px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+
+    &__icon {
+        &::before {
+            font-size: 24px;
+            margin: 0;
+        }
+    }
+
+    &__copyright {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main-footer {
+        &__wrapper-form {
+            width: 293px;
+        }
+
+        &__big-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__wrapper-nav {
+            width: 100px;
+        }
+
+        &__social {
+            width: 92px;
+            margin-left: auto;
+        }
+
+        &__copyright {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main-footer {
+        &__big-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__social {
+            margin-left: 0;
+        }
+
+        &__copyright {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .main-footer {
+        padding-top: 80px;
+    }
+}
